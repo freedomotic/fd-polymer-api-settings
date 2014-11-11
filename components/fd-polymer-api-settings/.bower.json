@@ -1,0 +1,28 @@
+{
+  "name": "fd-polymer-api-settings",
+  "keywords": [
+    "freedomotic",
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "fd-polymer-api-settings.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.0",
+    "core-localstorage": "polymer/core-localstorage#~0.4.2"
+  },
+  "devDependencies": {
+    "polymer-test-tools": "Polymer/polymer-test-tools#^0.4.0"
+  },
+  "homepage": "https://github.com/freedomotic/fd-polymer-api-settings",
+  "_release": "4026ca977f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4026ca977f6ad5b1ccfae06a33f04fa98d97b88a"
+  },
+  "_source": "git://github.com/freedomotic/fd-polymer-api-settings.git",
+  "_target": "master",
+  "_originalSource": "freedomotic/fd-polymer-api-settings",
+  "_direct": true
+}
