@@ -1,6 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../core-localstorage/core-localstorage.html">
-
 <!--
 Element providing DAO for API settings
 
@@ -18,7 +17,7 @@ Element providing DAO for API settings
   <template>
   <style>
   </style>
-    <core-localstorage
+ <core-localstorage
       name="ssl" 
       value="{{ssl}}">
     </core-localstorage>  
@@ -37,21 +36,22 @@ Element providing DAO for API settings
       name="apiVersion" 
       value="{{apiVersion}}">
     </core-localstorage>  
-    
+
     <core-localstorage
       name="credentialrequired" 
       value="{{credentialRequired}}">
     </core-localstorage>
-        
+    
     <core-localstorage
       name="apiurl" 
       value="{{apiUrl}}">
     </core-localstorage>
   </template>
-
+  
   <script>
 
     Polymer("fd-api-settings",{
+    
     /**
        * The 'credentialRequired' attribute tells whether the API call requires authentication 
        *
@@ -105,8 +105,7 @@ Element providing DAO for API settings
 
     observe: {
       "ssl address port apiVersion": "reloadUrl"
-    },
-
+    }, 
     reloadUrl: function(){
       if(this.ssl != undefined && !!this.apiVersion && !!this.address){
         if (!this.port){
@@ -118,7 +117,7 @@ Element providing DAO for API settings
         }   
         this.apiUrl= (this.ssl ? "https" : "http") +"://"+ this.address + ":" + this.port +"/"+ this.apiVersion + "/";
       }
-      console.log("API:" + this.apiUrl);
+      //console.log("API:" + this.apiUrl);
     }
     });
 
