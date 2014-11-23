@@ -12,7 +12,7 @@ Element providing DAO for API settings
 @status alpha
 @homepage http://polymerlabs.github.io/fd-polymer-api-settings
 -->
-<polymer-element name="fd-api-settings" attributes="address ssl apiVersion credentialRequired ssl port apiUrl">
+<polymer-element name="fd-api-settings" attributes="address ssl apiVersion ssl port apiUrl">
 
   <template>
   <style>
@@ -38,11 +38,6 @@ Element providing DAO for API settings
     </core-localstorage>  
 
     <core-localstorage
-      name="credentialrequired" 
-      value="{{credentialRequired}}">
-    </core-localstorage>
-    
-    <core-localstorage
       name="apiurl" 
       value="{{apiUrl}}">
     </core-localstorage>
@@ -59,7 +54,7 @@ Element providing DAO for API settings
        * @type boolean
        */
     
-    credentialRequired: false,
+    credentialRequired: true,
     
     /**
        * The 'address' attribute specifies the hostname or ip address of API service 
