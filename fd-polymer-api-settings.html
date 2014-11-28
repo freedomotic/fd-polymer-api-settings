@@ -44,7 +44,27 @@ Element providing DAO for API settings
   </template>
   
   <script>
-
+    PolymerExpressions.prototype.asFreedomoticResource = function(prim, apiUrl, alt){
+        var url;
+        if (!!apiUrl){
+          if (!!alt && !!prim){
+            url = apiUrl + "resources/" + prim + "?fbId=" + alt;
+            console.log("IMG:" + url);  
+            return url;
+          } else {
+            if (!!prim){
+                url =  apiUrl + "resources/" + prim;
+                console.log("IMG:" + url);
+                return url;
+            }
+            if (!!alt){
+              url= apiUrl + "resources/" + alt;
+              console.log("IMG:" + url);
+              return url;
+            }
+          }
+        }
+      };
     Polymer("fd-api-settings",{
     
     /**
