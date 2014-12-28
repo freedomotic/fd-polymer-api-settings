@@ -12,34 +12,39 @@ Element providing DAO for API settings
 @status alpha
 @homepage http://polymerlabs.github.io/fd-polymer-api-settings
 -->
-<polymer-element name="fd-api-settings" attributes="address ssl apiVersion ssl port apiUrl">
+<polymer-element name="fd-api-settings" attributes="address ssl apiVersion ssl port apiUrl noSave">
 
   <template>
   <style>
   </style>
  <core-localstorage
       name="ssl" 
-      value="{{ssl}}">
+      value="{{ssl}}"
+      autosaveDisabled="{{noSave}}">
     </core-localstorage>  
 
     <core-localstorage
       name="address" 
-      value="{{address}}">
+      value="{{address}}"
+      autosaveDisabled="{{noSave}}">
     </core-localstorage>
 
     <core-localstorage
       name="port" 
-      value="{{port}}">
+      value="{{port}}"
+      autosaveDisabled="{{noSave}}">
     </core-localstorage>  
 
     <core-localstorage
       name="apiVersion" 
-      value="{{apiVersion}}">
+      value="{{apiVersion}}"
+      autosaveDisabled="{{noSave}}">
     </core-localstorage>  
 
     <core-localstorage
       name="apiurl" 
-      value="{{apiUrl}}">
+      value="{{apiUrl}}"
+      autosaveDisabled="{{noSave}}">
     </core-localstorage>
   </template>
   
@@ -83,7 +88,7 @@ Element providing DAO for API settings
        * @type string
        */
     
-    address: undefined,
+    address: "localhost",
     
     /**
        * The 'apiVersion' attribute specifies the API version to use 
@@ -100,7 +105,7 @@ Element providing DAO for API settings
        * @attribute port
        * @type int
        */
-    port: 0,
+    port: 9111,
     
     /**
        * The 'ssl' attribute tells whether the API call requires a encrypted connection 
@@ -117,7 +122,7 @@ Element providing DAO for API settings
        * @type string
        */
     apiUrl: undefined,
-
+    noSave: true,
     observe: {
       "ssl address port apiVersion": "reloadUrl"
     }, 
