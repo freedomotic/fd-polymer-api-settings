@@ -1,6 +1,6 @@
 {
   "name": "fd-polymer-api-settings",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "keywords": [
     "freedomotic",
     "seed",
@@ -9,11 +9,11 @@
   ],
   "main": "fd-polymer-api-settings.html",
   "dependencies": {
-    "core-elements": "polymer/core-elements#~0.5.4",
-    "core-localstorage": "polymer/core-localstorage#~0.5.4"
+    "core-elements": "polymer/core-elements#~0.5.5",
+    "core-localstorage": "polymer/core-localstorage#~0.5.5"
   },
   "devDependencies": {
-    "polymer-test-tools": "Polymer/polymer-test-tools#^0.5.4"
+    "polymer-test-tools": "Polymer/polymer-test-tools#^0.5.5"
   },
   "homepage": "https://github.com/freedomotic/fd-polymer-api-settings",
   "authors": [
